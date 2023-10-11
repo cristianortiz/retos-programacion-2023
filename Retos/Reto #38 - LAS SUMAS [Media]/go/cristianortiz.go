@@ -27,8 +27,8 @@ func sumCombinations(candidates []int, target int) [][]int {
 		//loop principal
 		for i := start; i < len(candidates); i++ {
 
-			//si target es un valor negativo o se ha alcanzado el final del slice candidates, no hay solucion
-			//se interrumpe el ciclo
+			//si target es un valor negativo o se ha alcanzado el final del slice candidates, no se ha encontrado
+			//solucion, se interrumpe el ciclo y se retorna a la llamada recursiva anterior
 			if target < 0 || start == len(candidates) {
 				break
 			}
